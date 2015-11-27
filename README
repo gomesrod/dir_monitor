@@ -1,0 +1,15 @@
+This is a simple application to watch the latest files of some selected directories.
+
+You can use this, for example, if you have to wait for some processing to generate / remove files on directories. Then instead of manually "polling" the directories (by refreshing explorer windows or issuing ls commands every few seconds) just open dir_monitor and watch as the files come and go.
+
+The directories to be watched are configured in the dir_monitor.conf file, located in the current dir.
+Format:
+
+=========================================================
+Dir Description 1 = /path/to/directory
+Another Monitored Dir = /path/to/other/place/of/interest
+
+On Windows:
+Dir Description = C:\path\to\directory\in\windows
+=========================================================
+
