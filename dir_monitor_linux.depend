@@ -1,0 +1,47 @@
+# depslib dependency file v1.0
+1448631500 source:/home/rodrigo/projetos/dir_monitor/src/dir_configuration.cpp
+	"dir_configuration.h"
+	<fstream>
+	<boost/program_options/parsers.hpp>
+
+1448631500 /home/rodrigo/projetos/dir_monitor/include/dir_configuration.h
+	<string>
+	<stdexcept>
+	<vector>
+
+1448631500 source:/home/rodrigo/projetos/dir_monitor/src/directory_information.cpp
+	"directory_information.h"
+
+1448631500 /home/rodrigo/projetos/dir_monitor/include/directory_information.h
+	<string>
+	<vector>
+
+1449078265 source:/home/rodrigo/projetos/dir_monitor/src/main.cpp
+	"dir_configuration.h"
+	"monitor_core.h"
+	"monitor_gui.h"
+	"directory_information.h"
+	<iostream>
+
+1449078245 /home/rodrigo/projetos/dir_monitor/include/monitor_core.h
+	"directory_information.h"
+	<stdexcept>
+	<vector>
+	<string>
+
+1448631500 /home/rodrigo/projetos/dir_monitor/include/monitor_gui.h
+	"directory_information.h"
+	<vector>
+
+1449078245 source:/home/rodrigo/projetos/dir_monitor/src/monitor_core.cpp
+	"monitor_core.h"
+	<boost/date_time.hpp>
+	<boost/filesystem.hpp>
+	<algorithm>
+
+1448631500 source:/home/rodrigo/projetos/dir_monitor/src/monitor_gui.cpp
+	"monitor_gui.h"
+	<iostream>
+	<boost/date_time.hpp>
+	<curses.h>
+
