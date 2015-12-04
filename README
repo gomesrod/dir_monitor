@@ -13,3 +13,9 @@ On Windows:
 Dir Description = C:\path\to\directory\in\windows
 =========================================================
 
+
+******
+Build instructions:
+- The project is created as a Code::Blocks project. There is one project for Windows(Mingw) and another for Linux. Open the respective .cbp file using the IDE.
+- Dependencies: boost_filesystem, boost_date_time, boost_program_options, boost_system, curses (ncurses on Linux, pdcurses on Windows)
+

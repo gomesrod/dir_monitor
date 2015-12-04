@@ -5304,13 +5304,13 @@
 	"directory_information.h"
 	<vector>
 
-1448567710 source:d:\rodrigo\projects\dir_monitor\src\monitor_gui.cpp
+1449228123 source:d:\rodrigo\projects\dir_monitor\src\monitor_gui.cpp
 	"monitor_gui.h"
 	<iostream>
 	<boost/date_time.hpp>
 	<curses.h>
 
-1448482800 source:d:\rodrigo\projects\dir_monitor\src\monitor_core.cpp
+1449228031 source:d:\rodrigo\projects\dir_monitor\src\monitor_core.cpp
 	"monitor_core.h"
 	<boost/date_time.hpp>
 	<boost/filesystem.hpp>
@@ -5322,7 +5322,7 @@
 	<boost/filesystem/operations.hpp>
 	<boost/filesystem/convenience.hpp>
 
-1437998957 c:\software\libs\boost_1_59_0\boost\filesystem\config.hpp
+1448972262 c:\software\libs\boost_1_59_0\boost\filesystem\config.hpp
 	<boost/config.hpp>
 	<boost/system/api_config.hpp>
 	<boost/detail/workaround.hpp>
@@ -8817,4 +8817,11 @@
 	<boost/date_time/time_zone_names.hpp>
 	<boost/date_time/time_zone_base.hpp>
 	<boost/date_time/time_parsing.hpp>
+
+1449228123 source:d:\rodrigo\projects\dir_monitor\src\main.cpp
+	"dir_configuration.h"
+	"monitor_core.h"
+	"monitor_gui.h"
+	"directory_information.h"
+	<iostream>
 
