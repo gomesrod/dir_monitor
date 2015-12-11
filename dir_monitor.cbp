@@ -13,15 +13,7 @@
 				<Option compiler="gnu_gcc_compiler_inst2" />
 				<Compiler>
 					<Add option="-g" />
-					<Add directory="C:/software/libs/boost_1_59_0" />
-					<Add directory="include" />
 				</Compiler>
-				<Linker>
-					<Add library="boost_program_options-mgw44-mt-d-1_59" />
-					<Add library="boost_filesystem-mgw44-mt-d-1_59" />
-					<Add library="boost_system-mgw44-mt-d-1_59" />
-					<Add directory="C:/software/libs/boost_1_59_0/stage/lib" />
-				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/dir_monitor" prefix_auto="1" extension_auto="1" />
@@ -30,28 +22,37 @@
 				<Option compiler="gnu_gcc_compiler_inst2" />
 				<Compiler>
 					<Add option="-O2" />
-					<Add directory="C:/software/libs/boost_1_59_0" />
-					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
-					<Add library="boost_program_options-mgw44-mt-1_59" />
-					<Add directory="C:/software/libs/boost_1_59_0/stage/lib" />
 				</Linker>
 			</Target>
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add directory="include" />
+			<Add directory="C:/software/libs/boost_1_59_0" />
+			<Add directory="C:/software/libs/pdcurses" />
 		</Compiler>
+		<Linker>
+			<Add option="-static" />
+			<Add library="pdcurses" />
+			<Add library="boost_program_options-mgw44-mt-1_59" />
+			<Add library="boost_filesystem-mgw44-mt-1_59" />
+			<Add library="boost_system-mgw44-mt-1_59" />
+			<Add library="boost_date_time-mgw44-mt-1_59" />
+			<Add directory="C:/software/libs/boost_1_59_0/stage/lib" />
+			<Add directory="C:/software/libs/pdcurses/win32" />
+		</Linker>
 		<Unit filename="dir_monitor.conf" />
 		<Unit filename="include/dir_configuration.h" />
 		<Unit filename="include/directory_information.h" />
 		<Unit filename="include/monitor_core.h" />
 		<Unit filename="include/monitor_gui.h" />
-		<Unit filename="main.cpp" />
 		<Unit filename="src/dir_configuration.cpp" />
 		<Unit filename="src/directory_information.cpp" />
+		<Unit filename="src/main.cpp" />
 		<Unit filename="src/monitor_core.cpp" />
 		<Unit filename="src/monitor_gui.cpp" />
 		<Extensions>
