@@ -22,10 +22,14 @@ void dir_configuration::load(string path) throw(std::runtime_error)
 
     options_description opts_desc;
 
-    parsed_options parsed_opts = parse_config_file(config_file, opts_desc, true);
+    try {
+        parsed_options parsed_opts = parse_config_file(config_file, opts_desc, true);
 
-    for (vector<basic_option<char> >::iterator iter = parsed_opts.options.begin(); iter != parsed_opts.options.end(); iter++) {
-        _values.push_back(make_pair(iter->string_key, iter->value[0]));
+        for (vector<basic_option<char> >::iterator iter = parsed_opts.options.begin(); iter != parsed_opts.options.end(); iter++) {
+            _values.push_back(make_pair(iter->string_key, iter->value[0]));
+        }
+    } catch (boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::program_options::invalid_config_file_syntax> >& ex) {
+        throw runtime_error(ex.what());
     }
 }
 

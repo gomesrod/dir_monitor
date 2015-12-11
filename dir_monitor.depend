@@ -5289,7 +5289,7 @@
 	<stdexcept>
 	<vector>
 
-1448309678 source:d:\rodrigo\projects\dir_monitor\src\dir_configuration.cpp
+1449862345 source:d:\rodrigo\projects\dir_monitor\src\dir_configuration.cpp
 	"dir_configuration.h"
 	<fstream>
 	<boost/program_options/parsers.hpp>
@@ -5310,9 +5310,10 @@
 	<boost/date_time.hpp>
 	<curses.h>
 
-1449228031 source:d:\rodrigo\projects\dir_monitor\src\monitor_core.cpp
+1449860479 source:d:\rodrigo\projects\dir_monitor\src\monitor_core.cpp
 	"monitor_core.h"
 	<boost/date_time.hpp>
+	"boost/date_time/c_local_time_adjustor.hpp"
 	<boost/filesystem.hpp>
 	<algorithm>
 
@@ -8818,10 +8819,16 @@
 	<boost/date_time/time_zone_base.hpp>
 	<boost/date_time/time_parsing.hpp>
 
-1449228123 source:d:\rodrigo\projects\dir_monitor\src\main.cpp
+1449861728 source:d:\rodrigo\projects\dir_monitor\src\main.cpp
 	"dir_configuration.h"
 	"monitor_core.h"
 	"monitor_gui.h"
 	"directory_information.h"
 	<iostream>
+
+1425424741 c:\software\libs\boost_1_59_0\boost\date_time\c_local_time_adjustor.hpp
+	<stdexcept>
+	<boost/throw_exception.hpp>
+	<boost/date_time/compiler_config.hpp>
+	<boost/date_time/c_time.hpp>
 
