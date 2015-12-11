@@ -1,6 +1,7 @@
 #include "monitor_core.h"
 
 #include <boost/date_time.hpp>
+#include "boost/date_time/c_local_time_adjustor.hpp"
 #include <boost/filesystem.hpp>
 
 #include <algorithm>
@@ -63,8 +64,10 @@ directory_information monitor_core::create_dir_information(const string& desc, c
         if (is_regular_file(filepath)) {
             string name = filepath.filename().string();
 
+            typedef boost::date_time::c_local_adjustor<boost::posix_time::ptime> local_adj;
+
             time_t write_time_t = last_write_time(filepath);
-            boost::posix_time::ptime write_time = boost::posix_time::from_time_t(write_time_t);
+            boost::posix_time::ptime write_time = local_adj::utc_to_local(boost::posix_time::from_time_t(write_time_t));
             string write_time_fmt = to_iso_extended_string(write_time);
             write_time_fmt.replace(write_time_fmt.find('T'), 1, " ");
 
