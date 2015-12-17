@@ -7,8 +7,6 @@
 
 using namespace std;
 
-void _sleep(int millis);
-
 int main(int argc, char** argv)
 {
     dir_configuration cfg;
@@ -49,11 +47,9 @@ int main(int argc, char** argv)
     }
 
     monitor_gui gui;
-    while(true) {
+    while(!gui.quit_signal_received()) {
         vector<directory_information> info = core.updated_status();
-        if (!gui.display(info)) {
-            break;
-        }
+        gui.display(info);
     }
 
     return 0;

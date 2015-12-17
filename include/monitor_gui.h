@@ -10,12 +10,14 @@ class monitor_gui
         monitor_gui();
         virtual ~monitor_gui();
 
-        bool display(std::vector<directory_information>);
+        void display(std::vector<directory_information>);
+        bool quit_signal_received() {return _quit_signal;};
 
     private:
         struct ReverseDateTimeOrderComparator {
             bool operator()(const directory_information::file_info& f1, const directory_information::file_info& f2);
         };
+        bool _quit_signal;
 };
 
 #endif // MONITOR_GUI_H

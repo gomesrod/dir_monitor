@@ -30,7 +30,7 @@ monitor_gui::~monitor_gui()
    endwin();
 }
 
-bool monitor_gui::display(vector<directory_information> infos) {
+void monitor_gui::display(vector<directory_information> infos) {
     using namespace boost::posix_time;
     static ptime start_time = second_clock::local_time();
 
@@ -127,10 +127,8 @@ printw("DEBUG-- infos_that_need_more_space: %d   NEW max_files_to_display %u\n",
     refresh();
     char quit_char = getch();
     if (quit_char == 'q' || quit_char == 'Q') {
-        return false;
+        _quit_signal = true;
     }
-
-    return true;
 }
 
 bool monitor_gui::ReverseDateTimeOrderComparator::operator()(const directory_information::file_info& f1, const directory_information::file_info& f2) {
